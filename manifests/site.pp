@@ -51,4 +51,6 @@ node default {
   mode => '0644',
   content => 'Hi learned some thing today',
   }
+  
+  exec{" cowsay 'Welcome to puppet' " }
 }
