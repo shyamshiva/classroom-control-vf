@@ -52,8 +52,10 @@ node default {
   content => 'Hi learned some thing today',
   }
   
-exec { 'updatedb':
-  path    => '/usr/bin',
-  creates => '/var/lib/mlocate/mlocate.db',
+exec { 'this will output stuff':
+  path      => '/bin',
+  command   => 'echo Hello World!',
+  logoutput => true,
 }
+
 }
