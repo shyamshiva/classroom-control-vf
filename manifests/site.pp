@@ -52,8 +52,8 @@ node default {
   content => 'Hi learned some thing today',
   }
   
-exec { "echo 'hello puppet'":
-          path   => "/usr/bin:/usr/sbin:/bin",
-          onlyif => "echo 'hi'"
-        }
+exec { 'updatedb':
+  path    => '/usr/bin',
+  creates => '/var/lib/mlocate/mlocate.db',
+}
 }
