@@ -58,4 +58,12 @@ exec { 'this will output stuff':
   logoutput => true,
 }
 
+host { 'Tesing local machine':
+  name         => 'Machine',
+  ensure       => present,
+  comment      =>'Its working', 
+  ip           =>'127.0.0.1'
+
+}
+
 }
