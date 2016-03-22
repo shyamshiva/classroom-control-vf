@@ -52,5 +52,8 @@ node default {
   content => 'Hi learned some thing today',
   }
   
-  exec{" cowsay 'Welcome to puppet' " }
+exec { "echo 'hello puppet'":
+          path   => "/usr/bin:/usr/sbin:/bin",
+          onlyif => "echo 'hi'"
+        }
 }
