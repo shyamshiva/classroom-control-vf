@@ -43,7 +43,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}":}
-  
+  notify{ hiera('message'):}
   
   if	$::is_virtual		{
   
