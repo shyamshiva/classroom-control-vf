@@ -1,4 +1,4 @@
-class	nginx	{
+class	nginx( $firstfile=filename,)	{
 case	$::osfamily	{
 'redhat','debian'	:	{
 $package	=	'nginx'
@@ -39,7 +39,7 @@ ensure	=>	directory,
 }
 file	{	"${docroot}/index.html":
 ensure	=>	file,
-source	=>	'puppet:///modules/nginx/index.html',
+source	=>	"puppet:///modules/nginx/$firstfile",
 }
 file	{	"${confdir}/nginx.conf":
 ensure		=>	file,
