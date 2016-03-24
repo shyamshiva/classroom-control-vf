@@ -6,7 +6,6 @@ class profile::wordpress {
 class { '::mysql::server':
   root_password           => 'strongpassword',
 }
-
 #apache
 class { 'apache': }
 
