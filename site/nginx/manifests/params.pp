@@ -1,6 +1,6 @@
 class	nginx::params	{
   case	$::osfamily	{
-  'redhat':	{$filename='index.html',}
-  'windows'	:	{$filename='index2.html',}
+  'redhat':{$filename='index.html'}
+  'windows':{$filename='index2.html'}
   }
 }
