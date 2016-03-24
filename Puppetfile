@@ -10,7 +10,7 @@ mod 'vcsrepo',
 mod 'puppetlabs/mysql'
 #appache httpd
 
-mod 'puppetlabs/apache '
+mod 'puppetlabs/apache'
 
 #wordpress
 mod 'hunner/wordpress'
