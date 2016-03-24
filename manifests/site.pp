@@ -44,7 +44,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}":}
   notify{ hiera('message'):}
-  include nginx
+
   if	$::is_virtual		{
   
     notify	{	"Is	a	${::virtual}	virtual	machine.":	}
