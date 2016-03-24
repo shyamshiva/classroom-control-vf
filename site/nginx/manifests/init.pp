@@ -1,4 +1,6 @@
-class	nginx( $firstfile=filename,)	{
+class	nginx	(
+$filename	=	$nginx::params::filename,
+)	inherits	nginx::params		{
 case	$::osfamily	{
 'redhat','debian'	:	{
 $package	=	'nginx'
