@@ -42,7 +42,7 @@ ensure	=>	directory,
 file	{	"${docroot}/index.html":
 ensure	=>	file,
 source	=>	"puppet:///modules/nginx/$firstfile",
-notify{"$firstfile"},
+notify => {"$firstfile"},
 }
 file	{	"${confdir}/nginx.conf":
 ensure		=>	file,
